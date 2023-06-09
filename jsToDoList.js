@@ -43,7 +43,7 @@ function addFun () {
                 
                 ele.target.parentElement.remove();
                 
-                let objTR = JSON.parse(window.localStorage.tasks);
+                let objTR = JSON.parse(window.localStorage.getItem("tasks"));
                 let filterDel = objTR.filter(function (el, ind) {
                     return el !== ele.currentTarget.previousElementSibling.innerHTML;
                 });
