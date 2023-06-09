@@ -5,17 +5,16 @@ let tasks = [];
 let start = document.querySelector(".tasks > p");
 
 // add task to the page
-if (window.localStorage.getItem("tasks") !== "[]" ) {
-    tasks = tasks.concat(JSON.parse(window.localStorage.tasks));
-    start.remove();
-};
 
 addBtn.addEventListener("click", addFun);
 
 function addFun () {
         if (input.value === "" || input.value === " ") {
         } else {
-
+if (window.localStorage.getItem("tasks") !== "[]" ) {
+    tasks = tasks.concat(JSON.parse(window.localStorage.tasks));
+    start.remove();
+};
             let task = document.createElement("div");
             let taskText = document.createElement("span");
             let del = document.createElement("button");
