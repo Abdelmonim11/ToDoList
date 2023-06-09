@@ -93,6 +93,6 @@ function addFun2 () {
     };
 };
 if (window.localStorage.getItem("tasks") !== "[]" ) {
-    tasks = tasks.concat(JSON.parse(window.localStorage..getItem("tasks")));
+    tasks = tasks.concat(JSON.parse(window.localStorage.getItem("tasks")));
     start.remove();
 };
