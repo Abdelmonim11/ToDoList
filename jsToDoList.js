@@ -9,12 +9,9 @@ let start = document.querySelector(".tasks > p");
 addBtn.addEventListener("click", addFun);
 
 function addFun () {
-        if (input.value === "" || input.value === " ") {
+        if (input.value === "" || input.value.charAt(0) === " ") {
         } else {
-if (window.localStorage.getItem("tasks") !== "[]" ) {
-    tasks = tasks.concat(JSON.parse(window.localStorage.tasks));
-    start.remove();
-};
+                
             let task = document.createElement("div");
             let taskText = document.createElement("span");
             let del = document.createElement("button");
@@ -94,4 +91,8 @@ function addFun2 () {
                 }; 
             };   
     };
+};
+if (window.localStorage.getItem("tasks") !== "[]" ) {
+    tasks = tasks.concat(JSON.parse(window.localStorage..getItem("tasks")));
+    start.remove();
 };
